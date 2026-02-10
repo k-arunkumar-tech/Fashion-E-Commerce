@@ -5,6 +5,8 @@ import ProductCard from '../components/ProductCard';
 import ProductGrid from '../components/ProductGrid';
 import QuickViewModal from '../components/QuickViewModal';
 import { Button } from '../components/Button';
+import ServiceFeatures from '../components/ServiceFeatures';
+import Testimonials from '../components/Testimonials';
 import { getFeaturedProducts, getNewArrivals, getBestSellers } from '../data/products';
 import { collections } from '../data/collections';
 import { products } from '../data/products';
@@ -64,7 +66,7 @@ const Home = () => {
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.3 }}
-                  className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-8"
+                  className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-8"
                 >
                   {slide.title}
                 </motion.h1>
@@ -98,6 +100,9 @@ const Home = () => {
           ))}
         </div>
       </section>
+
+      {/* Service Features */}
+      <ServiceFeatures />
 
       {/* Featured Collections */}
       <section className="section-padding bg-neutral-50">
@@ -185,7 +190,7 @@ const Home = () => {
       </section>
 
       {/* Promotional Banner */}
-      <section className="py-24 bg-black text-white">
+      <section className="py-16 md:py-24 bg-black text-white">
         <div className="container-custom text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -193,7 +198,7 @@ const Home = () => {
             viewport={{ once: true }}
           >
             <p className="text-sm tracking-wider-2 mb-4">LIMITED TIME OFFER</p>
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
               Get 25% Off Your First Order
             </h2>
             <p className="text-neutral-300 mb-8 max-w-xl mx-auto">
@@ -236,6 +241,9 @@ const Home = () => {
           </ProductGrid>
         </div>
       </section>
+
+      {/* Testimonials */}
+      <Testimonials />
 
       {/* Quick View Modal */}
       <QuickViewModal
